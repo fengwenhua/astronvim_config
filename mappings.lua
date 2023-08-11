@@ -5,9 +5,22 @@
 -- automatically pick-up stored data by this setting.)
 return {
   -- first key is the mode
+  i = {
+    -- 编辑模式
+    -- 编辑模式下，跳到行首和行末
+    ["<C-b>"] = { "<ESC>^i", desc = "Beginning of line" },
+    ["<C-e>"] = { "<End>", desc = "End of line" },
+    -- 编辑模式下的左右下上
+    ["<C-h>"] = { "<Left>", desc = "Move left" },
+    ["<C-l>"] = { "<Right>", desc = "Move right" },
+    ["<C-j>"] = { "<Down>", desc = "Move down" },
+    ["<C-k>"] = { "<Up>", desc = "Move up" },
+  },
   n = {
     -- second key is the lefthand side of the map
-
+    -- 正常模式下，跳到行首和行末
+    ["<C-b>"] = { "<ESC>^", desc = "Beginning of line" },
+    ["<C-e>"] = { "<ESC>$", desc = "End of line" },
     -- navigate buffer tabs with `H` and `L`
     -- L = {
     --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
@@ -31,7 +44,7 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
   },
   t = {
     -- setting a mapping to false will disable it
