@@ -13,4 +13,5 @@ return {
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.gruvbox-baby" },
 }
