@@ -20,7 +20,7 @@ return {
     -- second key is the lefthand side of the map
     -- 正常模式下，跳到行首和行末
     ["<C-b>"] = { "<ESC>^", desc = "Beginning of line" },
-    ["<C-e>"] = { "<ESC>$", desc = "End of line" },
+    ["<C-e>"] = { "<ESC>g_", desc = "End of line" },
     -- 切换上面的buffer tab
     ["<tab>"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
