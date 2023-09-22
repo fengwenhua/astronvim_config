@@ -14,4 +14,5 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.gruvbox-baby" },
+  { import = "astrocommunity.completion.codeium-vim" },
 }
